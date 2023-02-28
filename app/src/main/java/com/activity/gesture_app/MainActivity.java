@@ -27,6 +27,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         GestureDetector.SimpleOnGestureListener listener = new GestureDetector.SimpleOnGestureListener(){
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+
+                Log.i(DEBUG_TAG, "onLongPress: ");
+                counter = (TextView)findViewById(R.id.my_counter);
+                String value = counter.getText().toString();
+                int counterV = Integer.parseInt(value);
+                counterV=0;
+                counter.setText(String.valueOf(counterV));
+            }
+
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float v1, float v2){
 
