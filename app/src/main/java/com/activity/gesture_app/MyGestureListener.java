@@ -6,6 +6,8 @@ import android.view.MotionEvent;
 
 import androidx.annotation.NonNull;
 
+//This class is use as reference, and not implemented
+
 // In the SimpleOnGestureListener subclass you should override
 // onDown and any other gesture that you want to detect.
 public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
